@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".RegistroCliente"></activity>
         <activity android:name=".Home"></activity>
+        <activity android:name=".Carrito"></activity>
     </application>
 
 </manifest>

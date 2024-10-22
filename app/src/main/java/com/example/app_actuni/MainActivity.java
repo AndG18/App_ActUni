@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
   /*  private EditText et1Is, et2Cis; */
-    private Button button2;
+    private Button button2, button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +27,21 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        button = findViewById(R.id.button);
         button2 = findViewById(R.id.button2);
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, RegistroCliente.class);
+                startActivity(intent);
+            }
+        });
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Home.class);
                 startActivity(intent);
             }
         });
