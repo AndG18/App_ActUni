@@ -3,7 +3,7 @@ App de Tienda Móvil
 Descripción:
 Esta aplicación móvil es un proyecto desarrollado para la materia de Desarrollo de Aplicaciones Móviles Nativas en la Fundación Universitaria Compensar, carrera de Ingeniería de Software, 6to semestre.
 
-
+__________________________________
 Funcionalidades
 
 La aplicación cuenta con las siguientes pantallas y funcionalidades:
@@ -25,19 +25,19 @@ Home: lista de productos (actualmente solo es un ejemplo visual).
 
 Carrito: muestra la lista de productos a comprar junto con un botón (solo es grafico).
 
-
+__________________________________
 Tecnologías y herramientas utilizadas
 
 Android Studio
 
 Lenguaje de programación: Java
 
-
+__________________________________
 Objetivo
 
 Este proyecto tiene como objetivo demostrar las habilidades adquiridas en la materia de Desarrollo de Aplicaciones Móviles Nativas, creando una aplicación móvil básica de tienda.
 
-
+__________________________________
 Estructura del proyecto
 
 El proyecto actualmente consta de 4 Activitys (pantallas):
@@ -50,7 +50,7 @@ Home
 
 Carrito
 
-
+__________________________________
 Notas
 La aplicación no tiene funcionalidad de backend, por lo que no se puede realizar una autenticación real.
 
@@ -58,8 +58,9 @@ Toda la app basicamente es solo un ejemplo visual.
 
 Los botones en la primer pantalla solo tienen la funcion de redirigir a otra pantalla al igual que el boton del carrito dentro de la pantalla home.
 
-
+__________________________________
 Autor
+
 Andres Gil (Monarch Dev)
 
 Universidad y carrera
