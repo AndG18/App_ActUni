@@ -3,16 +3,25 @@ App de Tienda Móvil
 Descripción:
 Esta aplicación móvil es un proyecto desarrollado para la materia de Desarrollo de Aplicaciones Móviles Nativas en la Fundación Universitaria Compensar, carrera de Ingeniería de Software, 6to semestre.
 
-Funcionalidades 
+Funcionalidades
+
 La aplicación cuenta con las siguientes pantallas y funcionalidades:
 Inicio de sesión: pantalla inicial que redirige al home o registro de cliente.
+
 Registro de cliente: permite registrar un nuevo cliente con los siguientes atributos:
+
 Nombres
+
 Apellidos
+
 Correo electrónico
+
 Usuario
+
 Contraseña
+
 Home: lista de productos (actualmente solo es un ejemplo visual).
+
 Carrito: muestra la lista de productos a comprar junto con un botón (solo es grafico).
 
 Tecnologías y herramientas utilizadas
