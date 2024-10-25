@@ -1,4 +1,5 @@
 App de Tienda Móvil
+
 Descripción
 Esta aplicación móvil es un proyecto desarrollado para la materia de Desarrollo de Aplicaciones Móviles Nativas en la Fundación Universitaria Compensar, carrera de Ingeniería de Software, 6to semestre.
 Funcionalidades
