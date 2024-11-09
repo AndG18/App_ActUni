@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +16,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App_ActUni"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAiDks8f6ZrYjnCso-opKg8xD6A136p7dw"/>
+
+        <activity
+            android:name=".GeoLocalizacion"
+            android:exported="false" />
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -21,9 +36,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistroCliente"></activity>
-        <activity android:name=".Home"></activity>
-        <activity android:name=".Carrito"></activity>
+        <activity android:name=".RegistroCliente" />
+        <activity android:name=".Home" />
+        <activity android:name=".Carrito" />
     </application>
 
 </manifest>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F2F2F"
+    tools:context=".AdminActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:background="#DD3D254E"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="654dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <LinearLayout
+            android:id="@+id/init"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/formularioUsuarios"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etnombread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Nombre"
+                android:inputType="text"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etapellidoad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Apellido"
+                android:inputType="text"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etcorreoad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Correo"
+                android:inputType="textEmailAddress"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ettelefonoad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Telefono"
+                android:inputType="text"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etuserad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Nombre de usuario"
+                android:inputType="text"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etcontraad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="crearUser"
+                android:text="Crear Usuario" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="consultarUser"
+                android:text="Consultar por Nombre de Usuario" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="modificarUser"
+                android:text="Modificar Usuario" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="eliminarUser"
+                android:text="Eliminar Usuario" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/formularioCategorias"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etnom_cat_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Nombre de la categoria"
+                android:inputType="text"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="crearCat"
+                android:text="Crear Categoria" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="consultarCat"
+                android:text="Consultar Categoria" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="modificarCat"
+                android:text="Modificar Categoria" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="eliminarCat"
+                android:text="Eliminar Categoria" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/formularioTipos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etnombre_tipo_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Nombre del Tipo"
+                android:inputType="text"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="crearT"
+                android:text="Crear Tipo" />
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="consultT"
+                android:text="Consultar Tipo" />
+
+            <Button
+                android:id="@+id/button15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="modT"
+                android:text="Modificar Tipo" />
+
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="eliminarT"
+                android:text="Eliminar Tipo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/formularioProductos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etid_product_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="ID"
+                android:inputType="number"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etnombre_product_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Nombre del Producto"
+                android:inputType="text"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etdescrip_prod_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Descripción"
+                android:inputType="text"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etmarca_prod_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Marca"
+                android:inputType="text"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etcolor_prod_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Color"
+                android:inputType="text"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ettamano_prod_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Tamaño"
+                android:inputType="text"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etprecio_prod_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Precio"
+                android:inputType="numberDecimal"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etstock_prod_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Stock"
+                android:inputType="number"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="crearP"
+                android:text="Crear Producto" />
+
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="consultP"
+                android:text="Consultar Producto por ID" />
+
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="modP"
+                android:text="Modificar Producto" />
+
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="eliminarP"
+                android:text="Eliminar Producto" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="cerrar"
+        android:text="Cerrar Administración"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

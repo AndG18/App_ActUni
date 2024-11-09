@@ -33,7 +33,7 @@
             android:textSize="16dp" />
 
         <EditText
-            android:id="@+id/ett1R"
+            android:id="@+id/ett1rnombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -50,7 +50,7 @@
             android:textSize="16dp" />
 
         <EditText
-            android:id="@+id/ett2R"
+            android:id="@+id/ett2rapellido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -67,13 +67,30 @@
             android:textSize="16dp" />
 
         <EditText
-            android:id="@+id/ett3Rc"
+            android:id="@+id/ett3rcorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textEmailAddress"
             android:textColor="#fff"
             android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Telefono:"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/ett4rtel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone"
+            android:textColor="#fff"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView8"
@@ -84,11 +101,13 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/ett4R"
+            android:id="@+id/ett5ruser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textColor="#fff"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView6"
@@ -99,7 +118,7 @@
             android:textSize="16dp" />
 
         <EditText
-            android:id="@+id/ett5Rcont"
+            android:id="@+id/ett6rcont"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -111,6 +130,7 @@
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="registrarUser"
             android:paddingTop="6dp"
             android:password="false"
             android:text="Registrarse" />
