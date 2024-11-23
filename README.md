@@ -28,7 +28,7 @@ La aplicación cuenta con las siguientes pantallas y funcionalidades:
 
 - Carrito: muestra la lista de productos a comprar junto con un botón de pagar y el total de costo de los productos(el botón aún no es funcional).
   
-- Administración: se pueden agregar, consultar, modifificar, eliminar los usuarios y productos.
+- Administración: se pueden agregar, consultar, modificar, eliminar los usuarios y productos.
 
 - Geolocalización: Esta ventana muestra un mapa interactivo junto a las coordenadas actuales del usuario.
 
