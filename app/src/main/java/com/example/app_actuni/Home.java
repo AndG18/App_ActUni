@@ -57,6 +57,7 @@ public class Home extends AppCompatActivity {
                     Toast.makeText(Home.this, "Administración", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Home.this, AdminActivity.class);
                     startActivity(intent);
+                    finish();
                     return true;
             } else if (item.getItemId() == R.id.irLocalizacion) {
                 Toast.makeText(Home.this, "Localización", Toast.LENGTH_SHORT).show();
