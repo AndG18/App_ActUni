@@ -1,9 +1,11 @@
 package com.example.app_actuni;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,12 +18,20 @@ public class Carrito extends AppCompatActivity {
     AdminSQLiteOpenHelper admin;
     SQLiteDatabase db;
     private TextView tvtotal;
+    private ImageButton ibvolver;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.carrito);
+
+        ibvolver = findViewById(R.id.ib_volver);
+
+        ibvolver.setOnClickListener(v -> {
+            Intent intent = new Intent(Carrito.this, Home.class);
+            startActivity(intent);
+        });
 
         admin = new AdminSQLiteOpenHelper(this, "db1", null, 1);
         db = admin.getWritableDatabase();
@@ -36,7 +46,7 @@ public class Carrito extends AppCompatActivity {
     void cargarDatosCarrito() {
         Cursor cursor = db.rawQuery("SELECT * FROM  Carrito", null);
 
-        adapter = new CarritoAdapter(cursor, db);
+        adapter = new CarritoAdapter(cursor, db, this);
 
         rvCarrito.setAdapter(adapter);
         rvCarrito.setLayoutManager(new LinearLayoutManager(getBaseContext()));

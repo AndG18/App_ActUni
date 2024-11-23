@@ -18,9 +18,10 @@ public class CarritoAdapter extends RecyclerView.Adapter<CarritoAdapter.ViewHold
     AdminSQLiteOpenHelper admin;
     private Carrito carrito;
 
-    public CarritoAdapter(Cursor cursor, SQLiteDatabase db) {
+    public CarritoAdapter(Cursor cursor, SQLiteDatabase db, Carrito carrito) {
         this.db = db;
         this.cursor = cursor;
+        this.carrito = carrito;
     }
 
     @NonNull
@@ -51,7 +52,7 @@ public class CarritoAdapter extends RecyclerView.Adapter<CarritoAdapter.ViewHold
             cursor.moveToPosition(position);
             int idProducto1 = cursor.getInt(cursor.getColumnIndexOrThrow("producto_id"));
 
-            eliminarProductoCarrito(idProducto1);
+            eliminarProductoCarrito(idProducto1, position);
 
             carrito.cargarDatosCarrito();
         });
@@ -85,8 +86,10 @@ public class CarritoAdapter extends RecyclerView.Adapter<CarritoAdapter.ViewHold
         }
     }
 
-    private void eliminarProductoCarrito(int idProducto) {
+    private void eliminarProductoCarrito(int idProducto, int position) {
         db.delete("Carrito", "producto_id = ?", new String[]{String.valueOf(idProducto)});
+        carrito.cargarDatosCarrito();
+        notifyItemRemoved(position);
     }
 
 }

@@ -8,4 +8,7 @@
     <item
         android:id="@+id/irLocalizacion"
         android:title="Localización" />
+    <item
+        android:id="@+id/cerrarSesion"
+        android:title="Cerrar Sesión" />
 </menu>

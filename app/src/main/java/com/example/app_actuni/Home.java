@@ -29,12 +29,9 @@ public class Home extends AppCompatActivity {
 
         ibCarrito = findViewById(R.id.ibCarrito);
 
-        ibCarrito.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Carrito.class);
-                startActivity(intent);
-            }
+        ibCarrito.setOnClickListener(v -> {
+            Intent intent = new Intent(Home.this, Carrito.class);
+            startActivity(intent);
         });
 
         rvProduct = findViewById(R.id.rvProductos);
@@ -66,6 +63,9 @@ public class Home extends AppCompatActivity {
                 Intent intent = new Intent(Home.this, GeoLocalizacion.class);
                 startActivity(intent);
                 return true;
+            } else if (item.getItemId() == R.id.cerrarSesion) {
+                Toast.makeText(Home.this, "Sesión Cerrada", Toast.LENGTH_SHORT).show();
+                finish();
             }
             return false;
         });

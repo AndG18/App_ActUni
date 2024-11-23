@@ -20,14 +20,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageButton
+            android:id="@+id/ib_volver"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/fondo_b_superior"
+            app:srcCompat="@drawable/ic_flecha_atras" />
+
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="10dp"
             android:text="Carrito de compras"
+            android:textAlignment="textStart"
             android:textColor="#fff"
-            android:textSize="34sp" />
+            android:textSize="28sp" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
