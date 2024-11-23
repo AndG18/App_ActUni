@@ -39,6 +39,8 @@ Android Studio
 
 Lenguaje de programación: Java
 
+SQLite usado para el backend local
+
 __________________________________
 <h3>Objetivo</h3>
 
