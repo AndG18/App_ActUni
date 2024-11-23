@@ -108,6 +108,7 @@ public class AdminActivity extends AppCompatActivity {
     public void cerrar(View v) {
         Intent intent = new Intent(AdminActivity.this, Home.class);
         startActivity(intent);
+        finish();
     }
 
     //CRUD Tabla Usuarios

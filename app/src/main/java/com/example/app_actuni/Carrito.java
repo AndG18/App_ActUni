@@ -1,7 +1,6 @@
 package com.example.app_actuni;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -29,8 +28,7 @@ public class Carrito extends AppCompatActivity {
         ibvolver = findViewById(R.id.ib_volver);
 
         ibvolver.setOnClickListener(v -> {
-            Intent intent = new Intent(Carrito.this, Home.class);
-            startActivity(intent);
+            finish();
         });
 
         admin = new AdminSQLiteOpenHelper(this, "db1", null, 1);
