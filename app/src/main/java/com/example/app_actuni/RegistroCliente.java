@@ -4,9 +4,11 @@ import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +17,7 @@ public class RegistroCliente extends AppCompatActivity {
 
     EditText etnombre, etapellido, etcorreo, ettelefono, etuser, etcontra;
     AdminSQLiteOpenHelper admin;
+    ImageView ivMostrarC;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -22,6 +25,7 @@ public class RegistroCliente extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registro_cliente);
 
+        ivMostrarC =findViewById(R.id.iv_show_contra);
         etnombre = findViewById(R.id.ett1rnombre);
         etapellido = findViewById(R.id.ett2rapellido);
         etcorreo = findViewById(R.id.ett3rcorreo);
@@ -30,6 +34,16 @@ public class RegistroCliente extends AppCompatActivity {
         etcontra = findViewById(R.id.ett6rcont);
 
         admin = new AdminSQLiteOpenHelper(this, "db1", null, 1);
+
+        ivMostrarC.setOnClickListener(v -> {
+            if (etcontra.getTransformationMethod() == PasswordTransformationMethod.getInstance()) {
+                etcontra.setTransformationMethod(null);
+                ivMostrarC.setImageResource(R.drawable.icono_ojocerrado);
+            } else {
+                etcontra.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                ivMostrarC.setImageResource(R.drawable.icono_ojoabierto);
+            }
+        });
 
     }
 
@@ -71,6 +85,8 @@ public class RegistroCliente extends AppCompatActivity {
         ettelefono.setText("");
         etuser.setText("");
         etcontra.setText("");
+
+        finish();
 
     }
 

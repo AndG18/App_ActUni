@@ -117,14 +117,27 @@
             android:textColor="#fff"
             android:textSize="16dp" />
 
-        <EditText
-            android:id="@+id/ett6rcont"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:textColor="#fff"
-            android:textSize="16dp" />
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ett6rcont"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textColor="#fff"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/iv_show_contra"
+                android:layout_width="24dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icono_ojoabierto" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/button3"

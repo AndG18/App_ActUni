@@ -1,12 +1,16 @@
 package com.example.app_actuni;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -18,9 +22,11 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     private EditText etiuser, eticont;
-    private Button button2, button;
+    private Button button2;
     AdminSQLiteOpenHelper admin;
+    ImageView ivMostrarCont;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,18 +37,25 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        button = findViewById(R.id.button);
+        ivMostrarCont = findViewById(R.id.iv_show_contra);
         button2 = findViewById(R.id.button2);
         etiuser = findViewById(R.id.et1Is);
         eticont = findViewById(R.id.et2Cis);
 
         admin = new AdminSQLiteOpenHelper(this, "db1", null, 1);
 
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RegistroCliente.class);
-                startActivity(intent);
+        button2.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, RegistroCliente.class);
+            startActivity(intent);
+        });
+
+        ivMostrarCont.setOnClickListener(v -> {
+            if (eticont.getTransformationMethod() == PasswordTransformationMethod.getInstance()) {
+                eticont.setTransformationMethod(null);
+                ivMostrarCont.setImageResource(R.drawable.icono_ojocerrado);
+            } else {
+                eticont.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                ivMostrarCont.setImageResource(R.drawable.icono_ojoabierto);
             }
         });
 
@@ -73,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
 
         cursor.close();
         db.close();
+
+        etiuser.setText("");
+        eticont.setText("");
 
     }
 

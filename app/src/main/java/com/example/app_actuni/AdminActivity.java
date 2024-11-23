@@ -2,6 +2,7 @@ package com.example.app_actuni;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -103,7 +104,8 @@ public class AdminActivity extends AppCompatActivity {
     }
 
     public void cerrar(View v) {
-        finish();
+        Intent intent = new Intent(AdminActivity.this, Home.class);
+        startActivity(intent);
     }
 
     //CRUD Tabla Usuarios
