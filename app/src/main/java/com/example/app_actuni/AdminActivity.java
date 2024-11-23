@@ -23,8 +23,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class AdminActivity extends AppCompatActivity {
 
     EditText etunombre, etuapellido, etucorreo, etutelefono, etuuser, etucontra;
-    EditText etcatnombre;
-    EditText ettipnombre;
+    EditText etcatid, etcatnombre;
+    EditText ettipid, ettipnombre;
     EditText etpid, etpnombre, etpdescrip, etpmarca, etpcolor, etptamano, etpprecio, etpstock;
     AdminSQLiteOpenHelper admin;
 
@@ -50,8 +50,10 @@ public class AdminActivity extends AppCompatActivity {
         etuuser = findViewById(R.id.etuserad);
         etucontra = findViewById(R.id.etcontraad);
 
+        ettipid = findViewById(R.id.etid_cat_ad);
         etcatnombre = findViewById(R.id.etnom_cat_ad);
 
+        ettipid = findViewById(R.id.etid_tip_ad);
         ettipnombre = findViewById(R.id.etnombre_tipo_ad);
 
         etpid = findViewById(R.id.etid_product_ad);
@@ -252,13 +254,13 @@ public class AdminActivity extends AppCompatActivity {
 
     public void consultarCat(View v) {
         SQLiteDatabase db = admin.getWritableDatabase();
-        String catname = etcatnombre.getText().toString();
+        String catid = etcatid.getText().toString();
 
-        Cursor fila = db.rawQuery("SELECT nombre FROM Categorias WHERE nombre = '" + catname + "'", null);
+        Cursor fila = db.rawQuery("SELECT * FROM Categorias WHERE id = '" + catid + "'", null);
 
         if (fila.moveToFirst()) {
             etcatnombre.setText(fila.getString(fila.getColumnIndexOrThrow("nombre")));
-
+            etcatid.setText("");
         } else {
             Toast.makeText(this, "No se ha encontrado la categoria", Toast.LENGTH_SHORT).show();
             etcatnombre.setText("");
@@ -268,13 +270,13 @@ public class AdminActivity extends AppCompatActivity {
 
     public void modificarCat(View v) {
         SQLiteDatabase db = admin.getWritableDatabase();
-        String catnam = etcatnombre.getText().toString();
+        String cat_id = etcatid.getText().toString();
 
         ContentValues registroC = new ContentValues();
 
         registroC.put("nombre", etcatnombre.getText().toString());
 
-        int cant = db.update("Categorias", registroC,"nombre = '" + catnam + "'", null);
+        int cant = db.update("Categorias", registroC,"id = '" + cat_id + "'", null);
 
         if (cant == 1) {
             Toast.makeText(this, "Se ha modificado la categoria", Toast.LENGTH_SHORT).show();
@@ -287,12 +289,13 @@ public class AdminActivity extends AppCompatActivity {
 
     public void eliminarCat(View v) {
         SQLiteDatabase db = admin.getWritableDatabase();
-        String catna = etcatnombre.getText().toString();
+        String idcat = etcatid.getText().toString();
 
-        int cant = db.delete("Categorias", "nombre = '" + catna + "'", null);
+        int cant = db.delete("Categorias", "id = '" + idcat + "'", null);
 
         if (cant == 1) {
             Toast.makeText(this, "Se ha eliminado la categoria", Toast.LENGTH_SHORT).show();
+            etcatid.setText("");
             etcatnombre.setText("");
 
         } else {
@@ -328,9 +331,9 @@ public class AdminActivity extends AppCompatActivity {
 
     public void consultT(View v) {
         SQLiteDatabase db = admin.getWritableDatabase();
-        String tipname = ettipnombre.getText().toString();
+        String tipid = ettipid.getText().toString();
 
-        Cursor fila = db.rawQuery("SELECT nombre FROM Tipo WHERE nombre = '" + tipname + "'", null);
+        Cursor fila = db.rawQuery("SELECT * FROM Tipo WHERE id = '" + tipid + "'", null);
 
         if (fila.moveToFirst()) {
             ettipnombre.setText(fila.getString(fila.getColumnIndexOrThrow("nombre")));
@@ -344,13 +347,13 @@ public class AdminActivity extends AppCompatActivity {
 
     public void modT(View v) {
         SQLiteDatabase db = admin.getWritableDatabase();
-        String nametip = ettipnombre.getText().toString();
+        String idtip = ettipid.getText().toString();
 
         ContentValues registroT = new ContentValues();
 
         registroT.put("nombre", ettipnombre.getText().toString());
 
-        int cant = db.update("Tipos", registroT,"nombre = '" + nametip + "'", null);
+        int cant = db.update("Tipos", registroT,"id = '" + idtip + "'", null);
 
         if (cant == 1) {
             Toast.makeText(this, "Se ha modificado el tipo", Toast.LENGTH_SHORT).show();
@@ -363,13 +366,14 @@ public class AdminActivity extends AppCompatActivity {
 
     public void eliminarT(View v) {
         SQLiteDatabase db = admin.getWritableDatabase();
-        String nt = ettipnombre.getText().toString();
+        String idt = ettipid.getText().toString();
 
-        int cant = db.delete("Tipos", "nombre = '" + nt + "'", null);
+        int cant = db.delete("Tipos", "nombre = '" + idt + "'", null);
 
         if (cant == 1) {
             Toast.makeText(this, "Se ha eliminado el tipo", Toast.LENGTH_SHORT).show();
             ettipnombre.setText("");
+            ettipid.setText("");
 
         } else {
             Toast.makeText(this, "No se ha encontrado el tipo", Toast.LENGTH_SHORT).show();

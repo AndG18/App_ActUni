@@ -160,6 +160,17 @@
             android:visibility="gone">
 
             <EditText
+                android:id="@+id/etid_cat_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="ID"
+                android:inputType="number"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
+
+            <EditText
                 android:id="@+id/etnom_cat_ad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -188,7 +199,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/fondo_btn"
                 android:onClick="consultarCat"
-                android:text="Consultar Categoria" />
+                android:text="Consultar Categoria por ID" />
 
             <Button
                 android:id="@+id/button11"
@@ -213,6 +224,17 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etid_tip_ad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="ID"
+                android:inputType="number"
+                android:textColor="#fff"
+                android:textColorHint="#898888"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/etnombre_tipo_ad"
@@ -243,7 +265,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/fondo_btn"
                 android:onClick="consultT"
-                android:text="Consultar Tipo" />
+                android:text="Consultar Tipo por ID" />
 
             <Button
                 android:id="@+id/button15"

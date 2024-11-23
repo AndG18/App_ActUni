@@ -20,6 +20,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAiDks8f6ZrYjnCso-opKg8xD6A136p7dw"/>
+        <meta-data
+            android:name="com.google.android.gms.auth.api.signin.GOOGLE_SIGN_IN_API_KEY"
+            android:value="730907741209-ht4j8bq8315nspmomn1cf2777j8vv5gs.apps.googleusercontent.com"/>
 
         <activity
             android:name=".GeoLocalizacion"
