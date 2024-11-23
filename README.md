@@ -8,7 +8,7 @@ __________________________________
 
 La aplicación cuenta con las siguientes pantallas y funcionalidades:
 
-- Inicio de sesión: pantalla inicial que redirige al home o registro de cliente.
+- Inicio de sesión: Pantalla inicial desde la cual se inicia sesion luego de registrarse y tambien desde la que se accede al registro de usuario.
 
 - Registro de cliente: permite registrar un nuevo cliente con los siguientes atributos:
 
@@ -17,14 +17,20 @@ La aplicación cuenta con las siguientes pantallas y funcionalidades:
   - Apellidos
 
   - Correo electrónico
+ 
+  - Teléfono
   
   - Usuario
   
   - Contraseña
 
-- Home: lista de productos (actualmente solo es un ejemplo visual).
+- Home: lista de productos, al agregar un nuevo producto desde la administración este se mostrara en la lista de productos.
 
-- Carrito: muestra la lista de productos a comprar junto con un botón (solo es grafico).
+- Carrito: muestra la lista de productos a comprar junto con un botón de pagar y el total de costo de los productos(el botón aún no es funcional).
+  
+- Administración: se pueden agregar, consultar, modifificar, eliminar los usuarios y productos.
+
+- Geolocalización: Esta ventana muestra un mapa interactivo junto a las coordenadas actuales del usuario.
 
 __________________________________
 <h3>Tecnologías y herramientas utilizadas</h3>
@@ -51,14 +57,18 @@ El proyecto actualmente consta de 4 Activitys (pantallas):
 
 - Carrito
 
+- Administración
+
+- Geolocalización
+
 __________________________________
 <h3>Notas</h3>
 
-- La aplicación no tiene funcionalidad de backend, por lo que no se puede realizar una autenticación real.
+- La aplicación tiene funcionalidad back-end de forma local usando SQLite.
 
-- Toda la app basicamente es solo un ejemplo visual.
+- Los botones continuar con google y pagar solo son visuales, no tienen funcionalidad.
 
-- Los botones en la primer pantalla solo tienen la funcion de redirigir a otra pantalla al igual que el boton del carrito dentro de la pantalla home.
+- La app tiene un logo.
 
 __________________________________
 <h3>Autor</h3>
