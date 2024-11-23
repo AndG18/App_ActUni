@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="fondo_general">#FF2F343A</color>
+    <color name="fondo_b_superior">#FF455A64</color>
+    <color name="fondo_btn">#446A89</color>
+    <color name="color_texto">#F2ECEC</color>
+    <color name="fondo_complement">#FF808080</color>
 </resources>
