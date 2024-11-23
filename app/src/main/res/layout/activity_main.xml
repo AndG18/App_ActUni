@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="300dp"
-        android:layout_height="275dp"
+        android:layout_height="335dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
@@ -92,5 +92,19 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/fondo_btn"
             android:text="Registrarse" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_google"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:drawableStart="@drawable/icono_google"
+            android:drawablePadding="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="CONTINUAR CON GOOGLE"
+            android:textSize="16sp">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
