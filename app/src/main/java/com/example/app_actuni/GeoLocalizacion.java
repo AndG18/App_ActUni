@@ -144,6 +144,8 @@ public class GeoLocalizacion extends AppCompatActivity implements OnMapReadyCall
             fusedLocatClient.getLastLocation().addOnSuccessListener(location -> {
                 if (location != null) {
                     actualizarUbi(location);
+                    LatLng ubicacionActual = new LatLng(location.getLatitude(), location.getLongitude());
+                    actualizarMapa(ubicacionActual);
                 }
             }).addOnFailureListener(e -> {
                 Log.e("Location", "Error de ubicación", e);
@@ -163,6 +165,11 @@ public class GeoLocalizacion extends AppCompatActivity implements OnMapReadyCall
 
         }
 
+    private void actualizarMapa(LatLng ubicaciónActual) {
+        mMap.addMarker(new MarkerOptions().position(ubicaciónActual).title("Ubicación seleccionada"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(ubicaciónActual));
+    }
+
     private void actualizarUbi(Location location) {
         tvlatitud.setText(String.format("%.6f", location.getLatitude()));
         tvlongitud.setText(String.format("%.6f", location.getLongitude()));
@@ -178,9 +185,7 @@ public class GeoLocalizacion extends AppCompatActivity implements OnMapReadyCall
         this.mMap.setOnMapClickListener(this);
         this.mMap.setOnMapLongClickListener(this);
 
-        LatLng col = new LatLng(4.4880655,-73.8477277);
-        mMap.addMarker(new MarkerOptions().position(col).title("Colombia"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(col));
+        iniciarLocalizacion();
     }
 
     @Override
@@ -188,9 +193,9 @@ public class GeoLocalizacion extends AppCompatActivity implements OnMapReadyCall
         tvlatitud.setText(String.format("%.6f", latLng.latitude));
         tvlongitud.setText(String.format("%.6f", latLng.longitude));
         mMap.clear();
-        LatLng col = new LatLng(latLng.latitude,latLng.longitude);
-        mMap.addMarker(new MarkerOptions().position(col).title("Colombia"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(col));
+
+        mMap.addMarker(new MarkerOptions().position(latLng).title("Ubicación Seleccionada"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
     }
 
     @Override
@@ -198,8 +203,8 @@ public class GeoLocalizacion extends AppCompatActivity implements OnMapReadyCall
         tvlatitud.setText(String.format("%.6f", latLng.latitude));
         tvlongitud.setText(String.format("%.6f", latLng.longitude));
         mMap.clear();
-        LatLng col = new LatLng(latLng.latitude,latLng.longitude);
-        mMap.addMarker(new MarkerOptions().position(col).title("Colombia"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(col));
+
+        mMap.addMarker(new MarkerOptions().position(latLng).title("Ubicación seleccionada"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
     }
 }
