@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2F2F2F"
+    android:background="@color/fondo_general"
     tools:context=".AdminActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="0dp"
         android:layout_height="75dp"
-        android:background="#DD3D254E"
+        android:background="@color/fondo_b_superior"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,6 +123,7 @@
                 android:id="@+id/button5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="crearUser"
                 android:text="Crear Usuario" />
 
@@ -130,6 +131,7 @@
                 android:id="@+id/button6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="consultarUser"
                 android:text="Consultar por Nombre de Usuario" />
 
@@ -137,6 +139,7 @@
                 android:id="@+id/button7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="modificarUser"
                 android:text="Modificar Usuario" />
 
@@ -144,6 +147,7 @@
                 android:id="@+id/button8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="eliminarUser"
                 android:text="Eliminar Usuario" />
         </LinearLayout>
@@ -174,6 +178,7 @@
                 android:id="@+id/button9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="crearCat"
                 android:text="Crear Categoria" />
 
@@ -181,6 +186,7 @@
                 android:id="@+id/button10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="consultarCat"
                 android:text="Consultar Categoria" />
 
@@ -188,6 +194,7 @@
                 android:id="@+id/button11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="modificarCat"
                 android:text="Modificar Categoria" />
 
@@ -195,6 +202,7 @@
                 android:id="@+id/button12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="eliminarCat"
                 android:text="Eliminar Categoria" />
         </LinearLayout>
@@ -225,6 +233,7 @@
                 android:id="@+id/button13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="crearT"
                 android:text="Crear Tipo" />
 
@@ -232,6 +241,7 @@
                 android:id="@+id/button14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="consultT"
                 android:text="Consultar Tipo" />
 
@@ -239,6 +249,7 @@
                 android:id="@+id/button15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="modT"
                 android:text="Modificar Tipo" />
 
@@ -246,6 +257,7 @@
                 android:id="@+id/button16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="eliminarT"
                 android:text="Eliminar Tipo" />
         </LinearLayout>
@@ -353,6 +365,7 @@
                 android:id="@+id/button17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="crearP"
                 android:text="Crear Producto" />
 
@@ -360,6 +373,7 @@
                 android:id="@+id/button18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="consultP"
                 android:text="Consultar Producto por ID" />
 
@@ -367,6 +381,7 @@
                 android:id="@+id/button19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="modP"
                 android:text="Modificar Producto" />
 
@@ -374,6 +389,7 @@
                 android:id="@+id/button20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/fondo_btn"
                 android:onClick="eliminarP"
                 android:text="Eliminar Producto" />
         </LinearLayout>
@@ -383,6 +399,7 @@
         android:id="@+id/button22"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/fondo_btn"
         android:onClick="cerrar"
         android:text="Cerrar Administración"
         app:layout_constraintBottom_toBottomOf="parent"
